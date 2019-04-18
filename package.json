@@ -4,7 +4,7 @@
   "description": "运行时校验接口数据",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node ./src/main.ts",
+    "start": "ts-node --files ./src/main.ts",
     "build": "tsc",
     "json": "typescript-json-schema ./src/types/response.d.ts '*' -o ./src/types/response.json --id=api --required   --strictNullChecks"
   },
