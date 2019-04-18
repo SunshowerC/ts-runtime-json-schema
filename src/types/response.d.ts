@@ -14,7 +14,7 @@ declare namespace ApiRes {
         author: User
         title: string
         date?: number 
-        type: 'life' | 'code' 
+        type: 'life' | 'code' | 'sport'
     }
 }
 

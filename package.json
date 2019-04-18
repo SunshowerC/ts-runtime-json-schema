@@ -19,11 +19,17 @@
   },
   "homepage": "https://github.com/Weiyu-Chen/ts-runtime-json-schema#readme",
   "devDependencies": {
+    "husky": "^1.3.1",
     "jsonschema": "^1.2.4",
     "typescript": "^3.4.3",
     "typescript-json-schema": "^0.37.0"
   },
   "dependencies": {
     "ts-node": "^8.0.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run json"
+    }
   }
 }
