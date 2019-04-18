@@ -3,5 +3,5 @@
 
 [博客详解](https://github.com/Weiyu-Chen/blog/issues/13)
 
-# 测试结果
-执行 `node ./dist/main.js`
+# 测试
+执行 `npm start`
