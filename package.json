@@ -21,6 +21,7 @@
   "devDependencies": {
     "husky": "^1.3.1",
     "jsonschema": "^1.2.4",
+    "lint-staged": "^8.1.5",
     "typescript": "^3.4.3",
     "typescript-json-schema": "^0.37.0"
   },
@@ -29,7 +30,13 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run json"
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "src/types/response.d.ts": [
+      "npm run json",
+      "git add"
+    ]
   }
 }

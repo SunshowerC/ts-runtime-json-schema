@@ -16,7 +16,8 @@
                 "type": {
                     "enum": [
                         "code",
-                        "life"
+                        "life",
+                        "sport"
                     ],
                     "type": "string"
                 }
@@ -39,14 +40,13 @@
                 "phone": {
                     "type": "number"
                 },
-                "sex": {
+                "se": {
                     "type": "string"
                 }
             },
             "required": [
                 "age",
-                "name",
-                "sex"
+                "name"
             ],
             "type": "object"
         }

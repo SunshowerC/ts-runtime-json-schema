@@ -1,7 +1,6 @@
 import schema from './types/response.json'
 
 import { Validator } from 'jsonschema'
-import ApiRes from './types/response'
 
 const v = new Validator()
 v.addSchema(schema, '/api')
@@ -31,18 +30,24 @@ const validateResponseData = (data: any, type: string) => {
 /** 
  * 获取用户数据请求
  */
-export const getUserInfo = (id:number): Promise<ApiRes.User>=>{
+export const getArticle = (id:number): Promise<ApiRes.Article>=>{
   // 这里实现异步请求，如 fetch('https://api_server/getUserInfo')
-  const mockData = {
+  const mockUser = {
     name: 'xxxx',
-    age: 'age应该是数字'
+    age: 'some string'
   }
-  return Promise.resolve(mockData)
-  .then(response => validateResponseData(response, `ApiRes.User`))
+
+  const mockArticle  = {
+    author: mockUser,
+    title: 'ss',
+    type: 'code'
+  }
+  return Promise.resolve(mockArticle)
+  .then(response => validateResponseData(response, `ApiRes.Article`))
 }
 
 
-getUserInfo(23434)
+getArticle(23434)
 .then(res => {
   // do something with response
 })

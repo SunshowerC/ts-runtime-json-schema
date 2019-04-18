@@ -3,9 +3,9 @@ declare namespace ApiRes {
 
     export interface User {
         name: string
-        sex: string 
         age: number
         phone?: number
+        se?: string         
     }
 
     
@@ -18,5 +18,4 @@ declare namespace ApiRes {
     }
 }
 
-export = ApiRes
 

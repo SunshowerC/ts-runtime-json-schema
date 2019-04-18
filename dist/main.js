@@ -26,16 +26,21 @@ const validateResponseData = (data, type) => {
 /**
  * 获取用户数据请求
  */
-exports.getUserInfo = (id) => {
+exports.getArticle = (id) => {
     // 这里实现异步请求，如 fetch('https://api_server/getUserInfo')
-    const mockData = {
+    const mockUser = {
         name: 'xxxx',
-        age: 'age应该是数字'
+        age: 'some string'
     };
-    return Promise.resolve(mockData)
-        .then(response => validateResponseData(response, `ApiRes.User`));
+    const mockArticle = {
+        author: mockUser,
+        title: 'ss',
+        type: 'code'
+    };
+    return Promise.resolve(mockArticle)
+        .then(response => validateResponseData(response, `ApiRes.Article`));
 };
-exports.getUserInfo(23434)
+exports.getArticle(23434)
     .then(res => {
     // do something with response
 });
