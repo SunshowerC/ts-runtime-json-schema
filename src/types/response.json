@@ -1,0 +1,55 @@
+{
+    "$id": "api",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "definitions": {
+        "ApiRes.Article": {
+            "properties": {
+                "author": {
+                    "$ref": "api#/definitions/ApiRes.User"
+                },
+                "date": {
+                    "type": "number"
+                },
+                "title": {
+                    "type": "string"
+                },
+                "type": {
+                    "enum": [
+                        "code",
+                        "life"
+                    ],
+                    "type": "string"
+                }
+            },
+            "required": [
+                "author",
+                "title",
+                "type"
+            ],
+            "type": "object"
+        },
+        "ApiRes.User": {
+            "properties": {
+                "age": {
+                    "type": "number"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "phone": {
+                    "type": "number"
+                },
+                "sex": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "age",
+                "name",
+                "sex"
+            ],
+            "type": "object"
+        }
+    }
+}
+

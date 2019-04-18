@@ -1,0 +1,29 @@
+{
+  "name": "ts-runtime-json-schema",
+  "version": "1.0.0",
+  "description": "运行时校验接口数据",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node ./src/main.ts",
+    "build": "tsc",
+    "json": "typescript-json-schema ./src/types/response.d.ts '*' -o ./src/types/response.json --id=api --required   --strictNullChecks"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Weiyu-Chen/ts-runtime-json-schema.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Weiyu-Chen/ts-runtime-json-schema/issues"
+  },
+  "homepage": "https://github.com/Weiyu-Chen/ts-runtime-json-schema#readme",
+  "devDependencies": {
+    "jsonschema": "^1.2.4",
+    "typescript": "^3.4.3",
+    "typescript-json-schema": "^0.37.0"
+  },
+  "dependencies": {
+    "ts-node": "^8.0.3"
+  }
+}
